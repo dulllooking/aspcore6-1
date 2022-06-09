@@ -1,0 +1,20 @@
+﻿@using (Html.BeginForm("Create", "Create", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+{
+<div class="form-horizontal">
+    <h4>檔案上傳 與 NPOI</h4>......基本款
+    <hr />
+
+    <div class="form-group">
+            <!-- ******************************************************************** -->
+            <i>這裡需要手動改成 "檔案上傳"的表單元件 type="file"</i><br />
+            <input type="file" id="FileUpload_FileName" name="FileUpload_FileName" />
+            @*     若要支援上傳多個檔案的 files input 元素，請在 <input> 元素上提供 multiple 屬性         *@
+            <!-- ******************************************************************** -->
+    </div>
+    <div class="form-group">
+            <input type="submit" value="Create（檔案上傳 與 NPOI）" class="btn btn-default" />
+
+            <h3>@ViewBag.Message</h3>
+    </div>
+</div>
+}
